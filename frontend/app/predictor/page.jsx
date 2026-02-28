@@ -27,7 +27,9 @@ export default function PredictorPage() {
       console.log('Payload:', flaskPayload);
 
       // Call Flask backend directly (bypass Next.js route)
-      const response = await fetch('http://localhost:5000/api/predict', {
+     const response = await fetch(
+  `${process.env.NEXT_PUBLIC_API_URL}/api/predict`,
+  {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(flaskPayload),
