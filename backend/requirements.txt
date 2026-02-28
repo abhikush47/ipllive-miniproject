@@ -10,7 +10,7 @@ Flask-CORS>=4.0.0
 # Data Processing & ML
 pandas>=2.2.0
 numpy>=1.26.0
-scikit-learn>=1.4.0
+scikit-learn==1.6.1
 
 # Environment & Utilities
 python-dotenv>=1.0.0
