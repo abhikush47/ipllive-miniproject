@@ -27,7 +27,10 @@ import traceback
 # ============================================================================
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for frontend communication
+CORS(app)
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "models", "live_model.pkl")
 
 # Setup logging
 logging.basicConfig(
