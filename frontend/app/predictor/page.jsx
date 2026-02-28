@@ -23,7 +23,7 @@ export default function PredictorPage() {
         wickets_left: 10 - Number(formData.wickets_team1),
       };
 
-      console.log(' Calling Flask at http://localhost:5000/api/predict');
+     console.log('Calling Flask at', process.env.NEXT_PUBLIC_API_URL);
       console.log('Payload:', flaskPayload);
 
       // Call Flask backend directly (bypass Next.js route)
