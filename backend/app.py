@@ -285,17 +285,8 @@ def internal_error(error):
 # Main
 # ============================================================================
 
-if __name__ == '__main__':
-    logger.info("=" * 60)
-    logger.info("IPL Live Match Win Predictor - API Server")
-    logger.info("=" * 60)
-    logger.info(f"Model status: {'✓ Loaded' if model else '✗ Not loaded'}")
-    logger.info("Starting Flask server...")
-    logger.info("API available at http://localhost:5000")
-    logger.info("=" * 60)
-    
-  import os
+import os
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
-    app.run(host="0.0.0.0", port=port) 
+    app.run(host="0.0.0.0", port=port)
